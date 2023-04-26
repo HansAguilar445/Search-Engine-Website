@@ -1,0 +1,277 @@
+@import "base.css";
+
+
+/* Main */
+
+body {
+    background-image: url("../img/background.jpg");
+    background-color: #f4f5f6;
+    background-position: center / center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav ul li a, .title ul li a {
+    font-size: 15px;
+    color: #d1d1d1;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: .2px;
+    text-transform: none;
+    cursor: pointer;
+}
+
+nav p i {
+    line-height: 56px;
+    font-size: 20px;
+    color: #d1d1d1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li a:hover, .title ul li a:hover, nav p i:hover {
+    color: #f8f8f8;
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 56px);
+    padding: 60px;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+section {
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+section p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #f8f8f8;
+}
+
+section h2 {
+    font-size: 36px;
+    color: #f8f8f8;
+    font-weight: 400;
+}
+
+section h3 {
+    font-size: 28px;
+    color: #f8f8f8;
+    font-weight: 500;
+}
+
+/*The form*/
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section form input[type="text"] {
+    width: 550px;
+    height: 45px;
+    background-color: #f4f5f6;
+    padding: 0 15px;
+    border-radius: 30px;
+    box-shadow: 0 5px 5px 0 rgba(59, 69,  152, 0.14);
+}
+
+#buttons {
+    margin-top: 5px;
+}
+
+section form input[type="button"] {
+    width: 150px;
+    height: 37px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 2px;
+    color: #f8f8f8;
+    box-shadow: 0 5px 5px 0 rgba(59, 69,  152, 0.14);
+}
+
+section form input[type="button"]:disabled {
+    cursor: not-allowed;
+}
+
+#bing {
+    background-color: #0166b8;
+}
+
+#bing:hover {
+    background-color: #287fc2;
+}
+
+#bing:disabled {
+    background-color: #4b9ad6;
+}
+
+#google {
+    background-color: #ea4335;
+}
+
+#google:hover {
+    background-color: #fd3f2e;
+}
+
+#google:disabled {
+    background-color: #ff6253;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Modal */
+
+#modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+}
+
+#modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#login {
+    width: 330px;
+    background-color: #f8f8f8;
+    padding: 30px;
+    box-shadow: 0 5px 5px 0 rgba(59, 69,  152, 0.14);
+    border-radius: 5px;
+    z-index: 6;
+}
+
+#login div {
+    width: 100%;
+}
+
+#exit {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#login p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#exit p {
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+    width: min-content;
+    user-select: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+#error {
+    margin: 7px 0;
+    color: #e00000;
+    white-space: pre-wrap;
+}
+
+#login h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+#login h6 {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#login form input[type="text"], #login form input[type="password"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    border-radius: 2px;
+}
+
+#login form input[type="text"].invalid, #login form input[type="password"].invalid {
+    border-bottom: 1px solid #e00000;
+}
+
+#login form input[type="text"]:focus, #login form input[type="password"]:focus {
+    border-bottom: 1px solid #0166b8;
+}
+
+#login form h6 {
+    margin-top: 15px;
+}
+
+#login a {
+    text-decoration: none;
+    color: #287fc2;
+}
+
+#submit-button {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#login input[type="button"] {
+    width: 120px;
+    height: 40px;
+    background-color: #0166b8;
+    color: #f8f8f8;
+    border-radius: 2px;
+}
+
+#login input[type="button"]:hover {
+    background-color: #287fc2;
+}
+
+#login ::placeholder {
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+    opacity: 1;
+}
+
+#blocker {
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}

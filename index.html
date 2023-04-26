@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Google-Bing Fusion</title>
+	<link rel="shortcut icon" href="assets/img/favicon.png?v=2" type="image/x-icon" />
+	<link rel="stylesheet" href="assets/css/js.css" media="all" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+	<script src="assets/js/login.js" defer></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<div class="container flexbox">
+				<div class="title">
+					<figure>
+						<img src="assets/img/logo.png">
+					</figure>
+					<ul>
+						<li><a href="#">Images</a></li>
+						<li><a id="videos" href="#">Videos</a></li>
+						<li><a href="#">Shopping</a></li>
+						<li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
+					</ul>
+				</div>
+				<nav>
+					<ul>
+						<li><a id="translate">Français</a></li>
+						<li><a id="signin">Sign In <i class="far fa-user" id="user"></i></a></li>
+						<li><a id="account" href="form.html">Create Account</i></a></li>
+						<li><a href="#"><i class="far fa-bell"></i></a></li>
+					</ul>
+					<p><i class="fas fa-bars" title="Menu"></i></p>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<section>
+					<form id="search" action="#">
+						<input type="text" id="search-bar" placeholder="Search">
+						<div id="buttons">
+							<input type="button" id="google" value="Search Google" disabled>
+							<input type="button" id="bing" value="Search Bing" disabled>
+						</div>
+					</form>
+				</section>
+			</div>
+		</main>
+		<noscript>
+			<p>This page requires a JavaScript-enabled browser.</p>
+		</noscript>
+		<div id="modal">
+			<div id="login">
+				<div id="exit">
+					<p id="close">&times;</p>
+				</div>
+				<h2>Sign in</h2>
+				<h6>to continue to GB Fusion</h6>
+				<p>For a simple dual-purpose search engine, just sign in to GB Fusion</p>
+				<p id="error"></p>
+				<form name="signin" novalidate>
+					<input type="text" name="username" placeholder="Username" required>
+					<input type="password" name="password" placeholder="Password" required>
+					<div id="submit-button">
+						<input type="button" name="send" value="Submit">
+					</div>
+					<h6>No account? <a href="form.html">Create one!</a></h6>
+				</form>
+			</div>
+			<div id="blocker">
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

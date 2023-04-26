@@ -1,0 +1,101 @@
+@import "base.css";
+/*  */
+
+main {
+    width: 100%;
+    height: 100vh;
+    padding: 60px;
+    background: linear-gradient(0deg, rgba(207,147,103,1) 0%, rgba(158,132,124,1) 51%, rgba(60,75,94,1) 100%);
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: calc(100vh - 120px);
+}
+
+img {
+    height: 34px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+section {
+    width: 400px;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    border: #dddedf;
+    box-shadow: 0 5px 5px 0 rgba(59, 69,  152, 0.14);
+}
+
+#back {
+    color: #000;
+}
+
+section div.form {
+    width: 100%;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#error {
+    margin: 7px 0;
+    color: #e00000;
+    white-space: pre-wrap;
+}
+
+form input[type="text"], form input[type="password"], form input[type="email"] {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    border-radius: 2px;
+}
+
+form input[type="text"].invalid, form input[type="password"].invalid, form input[type="email"].invalid {
+    border-bottom: 1px solid #e00000;
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus, form input[type="email"]:focus {
+    border-bottom: 1px solid #0166b8;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.buttons {
+    margin-top: 5px;
+    text-align: right;
+}
+
+input[type="button"] {
+    width: 135px;
+    height: 45px;
+    background-color: #0166b8;
+    color: #f8f8f8;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+input[type="button"]:hover {
+    background-color: #287fc2;
+}
+
+::placeholder {
+    text-align: left;
+    font-size: 17px;
+    font-weight: 400;
+    opacity: 1;
+}
