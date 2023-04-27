@@ -1,4 +1,4 @@
-# [Access the project here!](https://hansaguilar445.github.io/Search-Engine-Site/)
+# [Access the project here!](https://hansaguilar445.github.io/Search-Engine-Website/)
 ## Search Engine Site
 This was something I made for the final project of the JavaScript Basics course in 2022. We were tasked by our teacher to create a site that
 functioned as a search engine of sorts that forwarded input to Google or Bing after logging in with a preset username and password. We were
