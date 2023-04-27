@@ -18,9 +18,9 @@ const account = document.querySelector('#account');
 let loggedIn = false;
 let isEnglish = true;
 
-//Username and password - referencing Transformers G1
-const user = 'spikewitwicky';
-const pass = 'morethanmeetstheeye';
+//Old username and password - referencing Transformers G1
+// const user = 'spikewitwicky';
+// const pass = 'morethanmeetstheeye';
 
 //Variables: Search
 const searchbar = document.querySelector('#search-bar');
@@ -54,9 +54,11 @@ $send.addEventListener('click', function() {
 		issueCount++;
 		$username.classList.add('invalid');
 	} else {
-		if (username != user) {
+		let testUserName = localStorage.getItem(username);
+
+		if (username != testUserName) {
 			valid = false;
-			issues += 'Incorrect username\n';
+			issues += 'Invalid username\n';
 			issueCount++;
 			$username.classList.add('invalid');
 		} else {
@@ -71,7 +73,9 @@ $send.addEventListener('click', function() {
 		issueCount++;
 		$password.classList.add('invalid');
 	} else {
-		if (password != pass) {
+		let testPassWord = localStorage.getItem(`${username}Password`)
+
+		if (password != testPassWord) {
 			valid = false;
 			issues += 'Incorrect password';
 			issueCount++;
@@ -91,7 +95,7 @@ $send.addEventListener('click', function() {
 		google.disabled = false;
 		$username.value = '';
 		$password.value = '';
-		signin.innerHTML = 'Spike <i class="far fa-user" id="user"></i>';
+		signin.innerHTML = `${localStorage.getItem(`${username}Name`)} <i class="far fa-user" id="user"></i>`;
 		loggedIn = true;
 		modal.classList.remove('visible');
 	}

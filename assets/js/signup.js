@@ -91,11 +91,15 @@ $send.addEventListener('click', function() {
 	} else if (!valid && issueCount <= 4) {
 		error.innerText = issues;
 	} else {
-		fullName = '';
-		age = '';
-		email = '';
-		username = '';
-		password = '';
+		localStorage.setItem(`${username}Name`, fullName);
+		localStorage.setItem(username, username);
+		localStorage.setItem(`${username}Password`, password);
+
+		$fullName.value = '';
+		$age.value = '';
+		$email.value = '';
+		$username.value = '';
+		$password.value = '';
 		error.innerText = 'Success!';
 	}
 });
