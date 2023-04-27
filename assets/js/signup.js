@@ -102,6 +102,6 @@ $send.addEventListener('click', function() {
 		$password.value = '';
 		error.innerText = 'Success! Redirecting...';
 
-		setTimeout(() => window.location.assign('/index.html'), 1000);
+		setTimeout(() => window.location.assign('/Search-Engine-Website/index.html'), 1000);
 	}
 });
