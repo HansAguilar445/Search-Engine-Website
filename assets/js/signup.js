@@ -100,6 +100,8 @@ $send.addEventListener('click', function() {
 		$email.value = '';
 		$username.value = '';
 		$password.value = '';
-		error.innerText = 'Success!';
+		error.innerText = 'Success! Redirecting...';
+
+		setTimeout(() => window.location.assign('/index.html'), 1000);
 	}
 });
